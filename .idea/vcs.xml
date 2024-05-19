@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/openocd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/openocd/jimtcl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/openocd/src/jtag/drivers/libjaylink" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/openocd/tools/git2cl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pico-sdk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/picotool" vcs="Git" />
+  </component>
+</project>

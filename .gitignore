@@ -1,8 +1,6 @@
 /picotool-build
 /elf2uf2-build
 /bin
-/openocd/jimtcl/jimtcl.pc
-/openocd/jimtcl/tests/Makefile
 *.out
 *.uf2
 *.elf
