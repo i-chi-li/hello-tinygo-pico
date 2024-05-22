@@ -34,6 +34,7 @@ IntelliJ は、以下のプラグインをインストールしておく。
 
 ```
 git clone https://github.com/i-chi-li/hello-tinygo-pico.git
+cd hello-tinygo-pico
 git submodule update --init
 ```
 
