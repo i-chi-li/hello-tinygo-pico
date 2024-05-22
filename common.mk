@@ -18,26 +18,32 @@ OPENOCD_LOAD := $(OPENOCD) $(OPENOCD_FLAGS) -c "tcl_port disabled" -c "gdb_port 
 MKDIR := mkdir -p
 RM := rm -rf
 
-.PHONY: all build clean load openocd gdb
-
-# ターゲットのデフォルト値は、ディレクトリ名.elf
+# TARGET には、生成したい .elf ファイルを定義する
+# TARGET は、Makefile 側の定義を優先する。
+# デフォルト値は、Makefile の "ディレクトリ名.elf"
 TARGET ?= $(notdir $(CURDIR)).elf
+
+.PHONY: all build clean load openocd gdb
 
 all: build
 
 build: $(BUILD_DIR)/$(TARGET) $(BUILD_DIR)/$(TARGET:.elf=.uf2)
 
 clean:
-	$(RM) $(BUILD_DIR)/$(TARGET)
+	$(RM) $(BUILD_DIR)/$(TARGET) $(BUILD_DIR)/$(TARGET:.elf=.uf2)
 
+# .elf ファイル生成
 $(BUILD_DIR)/$(TARGET):
 
+# .uf2 ファイル生成
 $(BUILD_DIR)/$(TARGET:.elf=.uf2): $(BUILD_DIR)/$(TARGET)
 
+# .elf ファイル生成ルール
 %.elf:
 	$(MKDIR) $(BUILD_DIR)
 	$(TINYGO_BUILD) -o $@
 
+# .uf2 ファイル生成ルール
 %.uf2: %.elf
 	$(MKDIR) $(BUILD_DIR)
 	$(ELF2UF2) $< $@

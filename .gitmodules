@@ -1,10 +1,13 @@
 [submodule "pico-sdk"]
 	path = pico-sdk
 	url = https://github.com/raspberrypi/pico-sdk.git
+	ignore = dirty
 [submodule "picotool"]
 	path = picotool
 	url = https://github.com/raspberrypi/picotool.git
+	ignore = dirty
 [submodule "openocd"]
 	path = openocd
 	url = https://github.com/raspberrypi/openocd.git
 	branch = rp2040
+	ignore = dirty

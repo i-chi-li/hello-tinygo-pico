@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/hello.iml" filepath="$PROJECT_DIR$/hello.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-tinygo-pico.iml" filepath="$PROJECT_DIR$/hello-tinygo-pico.iml" />
     </modules>
   </component>
